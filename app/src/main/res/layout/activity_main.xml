@@ -7,53 +7,108 @@
     tools:context=".MainActivity"
     android:background="@drawable/add_vet">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="222dp"
-        android:layout_height="108dp"
-        android:layout_above="@+id/editTextTextEmailAddress2"
+    <TextView
+        android:id="@+id/loginView"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_Email"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="206dp"
-        app:srcCompat="@drawable/woof_logo" />
-    
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="104dp"
+        android:text="ADMIN LOGIN"
+        android:textColor="#FF9017"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/et_Email"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
+        android:layout_height="51dp"
+        android:layout_above="@+id/et_Password"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="36dp"
-
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/inputtxt"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:hint="E-mail"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#581414"
+        android:textColorHint="#86581414"
+        app:layout_constraintBottom_toTopOf="@+id/et_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/et_Password"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_above="@+id/bttn_loginPge"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/inputtxt"
+        android:ems="10"
+        android:hint="Password"
+        android:textColor="#581414"
+        android:textColorHint="#86581414"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_loginPge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginView"
+        app:layout_constraintVertical_bias="1.0" />
+
+
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/bttn_loginPge"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="185dp"
-        android:text="Button" />
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/add_btn"
+        android:elevation="4dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="197dp"
         android:layout_height="wrap_content"
-        android:id="@+id/mail"
-        android:layout_centerInParent="true">
+        android:layout_above="@+id/loginView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="87dp"
+        app:srcCompat="@drawable/woof_logo" />
 
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="hint" />
 </RelativeLayout>
