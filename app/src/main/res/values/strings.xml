@@ -10,5 +10,11 @@
     <string name="username_reg">Username</string>
     <string name="password_reg">Password</string>
     <string name="login_btn_register">Register</string>
-    <string name="new_user_register">New User? Register Here</string>
+    <string name="new_user_register">New Admin? Register Here</string>
+    <string name="reg_txt">Already an Admin? Signin Here</string>
+    <string name="logout_btn">Logout</string>
+    <string name="menu">MENU</string>
+    <string name="vetList">VETERINARIAN LIST</string>
+    <string name="add_veteBtn">ADD VETERINARIAN</string>
+    <string name="add_dog_detailsBtn">ADD DOG DETAILS</string>
 </resources>

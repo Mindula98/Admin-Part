@@ -107,7 +107,7 @@
         android:layout_above="@+id/registerBtn"
         android:layout_marginBottom="4dp"
         android:gravity="center"
-        android:text="@string/new_user_register"
+        android:text="@string/reg_txt"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/maroon" />
