@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminApp">
         <activity
+            android:name=".Menu"
+            android:exported="true" />
+        <activity
             android:name=".vetList"
             android:exported="true" />
         <activity
