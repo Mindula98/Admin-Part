@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminApp">
         <activity
+            android:name=".AddDogGroup"
+            android:exported="true" />
+        <activity
             android:name=".Menu"
             android:exported="true" />
         <activity
@@ -33,6 +36,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

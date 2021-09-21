@@ -17,4 +17,8 @@
     <string name="vetList">VETERINARIAN LIST</string>
     <string name="add_veteBtn">ADD VETERINARIAN</string>
     <string name="add_dog_detailsBtn">ADD DOG DETAILS</string>
+    <string name="add_groups">Add  Dog Groups</string>
+    <string name="group_name">Group Name</string>
+    <string name="create_group">Create Group</string>
+    <string name="icon_url">Icon URL</string>
 </resources>
