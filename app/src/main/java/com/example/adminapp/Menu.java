@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Menu extends AppCompatActivity {
-    Button logoutBtn;
+    Button logoutBtn, vetList, addVet, addDog;
     FirebaseAuth mAuth;
 
     @Override
@@ -23,6 +23,8 @@ public class Menu extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         logoutBtn = findViewById(R.id.Btnlogout);
+        vetList = findViewById(R.id.vetList);
+        addVet = findViewById(R.id.addVet);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,11 +34,32 @@ public class Menu extends AppCompatActivity {
                 signOutUser();
             }
         });
+
+        vetList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Menu.this,AddVeterinarian.class);
+                startActivity(i);
+            }
+        });
+
+        addVet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Menu.this, AddVeterinarian.class);
+                Toast.makeText(Menu.this, "Yanne na", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+
+            }
+        });
     }
 
     private void signOutUser() {
         Intent mainActivity = new Intent(Menu.this,MainActivity.class);
         mainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Toast.makeText(Menu.this, "Logged Out", Toast.LENGTH_SHORT).show();
         startActivity(mainActivity);
         finish();
     }
