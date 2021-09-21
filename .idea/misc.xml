@@ -3,21 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/drawable/btn_style.xml" value="0.2755208333333333" />
-        <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_add_veterinarian.xml" value="0.23645320197044334" />
-
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/drawable-hdpi/inputtext.xml" value="0.2755208333333333" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/drawable/bttn_style_create_group.xml" value="0.2755208333333333" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_add_dog_group.xml" value="0.259375" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_add_veterinarian.xml" value="0.2553846153846154" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_admin_register.xml" value="0.2553846153846154" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_main.xml" value="0.2553846153846154" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_menu.xml" value="0.259375" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_vet_list.xml" value="0.2553846153846154" />
-        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/bttn_style_welcome.xml" value="0.259375" />
-        <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_add_veterinarian.xml" value="0.259375" />
-
+        <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_add_veterinarian.xml" value="0.25" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_admin_register.xml" value="0.259375" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_menu.xml" value="0.259375" />
