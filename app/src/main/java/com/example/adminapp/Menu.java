@@ -49,7 +49,6 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Menu.this, AddVeterinarian.class);
-                Toast.makeText(Menu.this, "Yanne na", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
 
             }
