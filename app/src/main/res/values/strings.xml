@@ -17,4 +17,10 @@
     <string name="vetList">VETERINARIAN LIST</string>
     <string name="add_veteBtn">ADD VETERINARIAN</string>
     <string name="add_dog_detailsBtn">ADD DOG DETAILS</string>
+    <string name="add_Btn">ADD</string>
+    <string name="email_AV">Email</string>
+    <string name="TV_AV">ADD VETERINARIAN</string>
+    <string name="name_AV">Name</string>
+    <string name="address_AV">Address</string>
+    <string name="contact_number_AV">Contact Number</string>
 </resources>
