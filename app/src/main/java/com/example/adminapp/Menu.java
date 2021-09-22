@@ -39,7 +39,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Menu.this,AddVeterinarian.class);
+                Intent i = new Intent(Menu.this,vetList.class);
                 startActivity(i);
             }
         });

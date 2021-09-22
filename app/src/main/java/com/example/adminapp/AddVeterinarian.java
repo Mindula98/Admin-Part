@@ -50,7 +50,8 @@ public class AddVeterinarian extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         databaseReference.child(VetName).setValue(veterinarianModel);
                         Toast.makeText(AddVeterinarian.this, "Veterinarian Added", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AddVeterinarian.this, Menu.class));
+//                        startActivity(new Intent(AddVeterinarian.this, Menu.class));
+                        Clear();
 
                     }
 
@@ -64,5 +65,12 @@ public class AddVeterinarian extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void Clear() {
+        vetName.setText("");
+        vetAddress.setText("");
+        vetContact.setText("");
+        vetEmail.setText("");
     }
 }
