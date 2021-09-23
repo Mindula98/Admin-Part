@@ -25,7 +25,7 @@
     <string name="address_AV">Address</string>
     <string name="contact_number_AV">Contact Number</string>
 
-    <string name="add_groups">Add  Dog Groups</string>
+    <string name="add_groups">Add Dog Groups</string>
     <string name="group_name">Group Name</string>
     <string name="create_group">Create Group</string>
     <string name="icon_url">Icon URL</string>
@@ -33,5 +33,13 @@
     <string name="update_EdtVet">UPDATE</string>
     <string name="delete_EdtVet">DELETE</string>
     <string name="dogGroup_details">DOG DETAILS</string>
+    <string name="groupDetails">Details</string>
+    <string name="tit_updDetails">Update Details</string>
+    <string name="tit_grpName">Group Name</string>
+    <string name="tit_grpImage">Image URL</string>
+    <string name="tit_grpDetails">Group Details</string>
+    <string name="btn_grpDelete">Delete</string>
+    <string name="btn_grpEdit">Edit</string>
+    <string name="btn_update">Update</string>
 
 </resources>

@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/drawable/button.xml" value="0.23201754385964912" />
+        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/drawable/buttons.xml" value="0.23201754385964912" />
+        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/drawable/rounded_edittext.xml" value="0.2755208333333333" />
         <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_dogs_groups.xml" value="0.259375" />
         <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/activity_menu.xml" value="0.259375" />
         <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/group_holder.xml" value="0.259375" />
+        <entry key="..\:/My Files/Programming/Android Studio/Admin-Part/app/src/main/res/layout/update_popup.xml" value="0.259375" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/drawable/btn_style.xml" value="0.2755208333333333" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_add_dog_group.xml" value="0.259375" />
         <entry key="..\:/Y2S2/MAD/AdminApp/app/src/main/res/layout/activity_add_vet.xml" value="0.259375" />

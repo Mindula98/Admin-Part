@@ -7,49 +7,94 @@
     android:elevation="6dp"
     app:cardUseCompatPadding="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/groupDetails"
         android:background="@color/yellow"
-        android:paddingLeft="15dp"
-        android:paddingTop="10dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="15dp">
+        android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/groupImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/labrador_retriever"
-            app:civ_border_color="@color/dark_orange"
-            app:civ_border_width="2dp" />
-
-        <TextView
-            android:id="@+id/groupName"
+        <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/groupImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/labrador_retriever"
+                    app:civ_border_color="@color/dark_orange"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/groupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/groupImage"
+                    android:fontFamily="@font/poppins"
+                    android:text="Group Name"
+                    android:textColor="#000"
+                    android:textSize="23sp" />
+
+
+                <TextView
+                    android:id="@+id/groupDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/groupName"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toRightOf="@+id/groupImage"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/groupDetails"
+                    android:textColor="@color/light_black"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_toRightOf="@+id/groupImage"
-            android:fontFamily="@font/poppins"
-            android:text="Group Name"
-            android:textColor="#000"
-            android:textSize="23sp" />
+            android:layout_gravity="center"
+            android:layout_below="@+id/groupDetails"
+            android:layout_marginBottom="9dp"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/btn_groupEdit"
+                android:layout_width="173dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/buttons"
+                android:text="@string/btn_grpEdit"
+                android:textAllCaps="false" />
 
-        <TextView
-            android:id="@+id/groupDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/groupName"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="7dp"
-            android:layout_toRightOf="@+id/groupImage"
-            android:fontFamily="@font/poppins_light"
-            android:text="The Non-Sporting Group is a unique dog group because it doesn’t group dogs by a particular purpose or size—instead, it’s more of a catch-all group for dogs that don’t fit in other groups."
-            android:textColor="@color/light_black"
-            android:textSize="13sp"/>
+            <Button
+                android:id="@+id/btn_groupDelete"
+                android:layout_width="173dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/buttons"
+                android:text="@string/btn_grpDelete"
+                android:textAllCaps="false" />
 
-    </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>
