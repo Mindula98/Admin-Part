@@ -104,6 +104,32 @@ public class GrouAdapter extends FirebaseRecyclerAdapter<GroupsModel,GrouAdapter
                 });
             }
         });
+
+        //Delete Process
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.groupName.getContext());
+                builder.setTitle("Are you sure?");
+                builder.setMessage("This Process Cannot be Undone");
+
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseDatabase.getInstance().getReference().child("Groups")
+                                .child(getRef(position).getKey()).removeValue();
+                    }
+                });
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(holder.groupName.getContext(), "Cancelled.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.show();
+            }
+        });
     }
 
 
