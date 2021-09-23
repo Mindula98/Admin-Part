@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminApp">
         <activity
+            android:name=".DogsGroups"
+            android:exported="true" />
+        <activity
             android:name=".EditVeterinarian"
             android:exported="true" />
         <activity
