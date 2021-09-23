@@ -3,13 +3,13 @@
     <string name="admin_login_txt">ADMIN LOGIN</string>
     <string name="e_mail">E-mail</string>
     <string name="login_password">Password</string>
-    <string name="login_btn">Login</string>
+    <string name="login_btn">LOGIN</string>
     <string name="admin_register_txt">ADMIN REGISTER</string>
     <string name="re_enter_password">Re-enter Password</string>
     <string name="e_mail_reg">E-mail</string>
     <string name="username_reg">Username</string>
     <string name="password_reg">Password</string>
-    <string name="login_btn_register">Register</string>
+    <string name="login_btn_register">REGISTER</string>
     <string name="new_user_register">New Admin? Register Here</string>
     <string name="reg_txt">Already an Admin? Signin Here</string>
     <string name="logout_btn">Logout</string>
@@ -32,6 +32,15 @@
     <string name="edit_veterinarian">EDIT VETERINARIAN</string>
     <string name="update_EdtVet">UPDATE</string>
     <string name="delete_EdtVet">DELETE</string>
+
+    <string name="veterinarian_list">VETERINARIAN LIST</string>
+    <string name="veterinarian_name_CV">Veterinarian Name</string>
+    <string name="veterinarian_name_BM">Veterinarian Name</string>
+    <string name="address_BM">Address</string>
+    <string name="contact_BM">Contact</string>
+    <string name="email_BM">Email</string>
+    <string name="edit_details_BM">edit details</string>
+
     <string name="dogGroup_details">DOG DETAILS</string>
     <string name="groupDetails">Details</string>
     <string name="tit_updDetails">Update Details</string>
@@ -41,5 +50,6 @@
     <string name="btn_grpDelete">Delete</string>
     <string name="btn_grpEdit">Edit</string>
     <string name="btn_update">Update</string>
+
 
 </resources>
