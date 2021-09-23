@@ -32,5 +32,6 @@
     <string name="edit_veterinarian">EDIT VETERINARIAN</string>
     <string name="update_EdtVet">UPDATE</string>
     <string name="delete_EdtVet">DELETE</string>
+    <string name="dogGroup_details">DOG DETAILS</string>
 
 </resources>

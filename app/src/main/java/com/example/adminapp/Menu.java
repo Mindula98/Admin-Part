@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Menu extends AppCompatActivity {
-    Button logoutBtn, vetList, addVet, addDog;
+    Button logoutBtn, vetList, addVet, dogDetails;
     FirebaseAuth mAuth;
 
     @Override
@@ -25,6 +25,7 @@ public class Menu extends AppCompatActivity {
         logoutBtn = findViewById(R.id.Btnlogout);
         vetList = findViewById(R.id.vetList);
         addVet = findViewById(R.id.addVet);
+        dogDetails = findViewById(R.id.dogGroup_details);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +50,16 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Menu.this, AddVeterinarian.class);
+                startActivity(intent);
+
+            }
+        });
+
+        dogDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Menu.this, DogsGroups.class);
                 startActivity(intent);
 
             }
