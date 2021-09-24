@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -18,7 +19,7 @@ import java.util.Map;
 
 public class AddDogGroup extends AppCompatActivity {
 
-    EditText groupName, iconUrl;
+    EditText groupName, groupImage, groupDetails;
     Button btnAddgroup;
 
     @Override
@@ -27,14 +28,16 @@ public class AddDogGroup extends AppCompatActivity {
         setContentView(R.layout.activity_add_dog_group);
 
         groupName = (EditText)findViewById(R.id.group_name);
-        iconUrl = (EditText)findViewById(R.id.icon_url);
+        groupImage = (EditText)findViewById(R.id.group_image);
+        groupDetails = (EditText)findViewById(R.id.group_details);
 
         btnAddgroup = (Button)findViewById(R.id.create_group);
 
         btnAddgroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                insertGroup();
+               insertGroup();
+               clearAll();
             }
         });
     }
@@ -42,12 +45,13 @@ public class AddDogGroup extends AppCompatActivity {
     private void insertGroup(){
 
         Map<String,Object> map = new HashMap<>();
-        map.put("groupName",groupName.getText().toString());
-        map.put("iconUrl",iconUrl.getText().toString());
+        map.put("Name",groupName.getText().toString());
+        map.put("Image",groupImage.getText().toString());
+        map.put("Details",groupDetails.getText().toString());
 
-        FirebaseDatabase.getInstance().getReference().child("Dog Groups").push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+        FirebaseDatabase.getInstance().getReference().child("Groups").child(groupName.getText().toString())
+               .setValue(map)
+               .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(AddDogGroup.this, "Group Inserted Successfully", Toast.LENGTH_SHORT).show();
@@ -59,5 +63,13 @@ public class AddDogGroup extends AppCompatActivity {
                         Toast.makeText(AddDogGroup.this, "Error while Insertion", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void clearAll(){
+
+        groupName.setText("");
+        groupImage.setText("");
+        groupDetails.setText("");
+
     }
 }

@@ -26,9 +26,7 @@
     <string name="contact_number_AV">Contact Number</string>
 
     <string name="add_groups">Add Dog Groups</string>
-    <string name="group_name">Group Name</string>
     <string name="create_group">Create Group</string>
-    <string name="icon_url">Icon URL</string>
     <string name="edit_veterinarian">EDIT VETERINARIAN</string>
     <string name="update_EdtVet">UPDATE</string>
     <string name="delete_EdtVet">DELETE</string>
