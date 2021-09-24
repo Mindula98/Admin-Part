@@ -1,63 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profilebackground"
+    android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".AddDogGroup">
 
     <TextView
         android:id="@+id/add_groups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/add_groups"
         android:textColor="#FF9017"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/title_grpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/tit_grpName"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/group_name"
-        android:layout_width="282dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="180dp"
-        android:background="@drawable/inputtext"
-        android:hint="@string/group_name"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_groups" />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext"/>
+
+    <TextView
+        android:id="@+id/title_grpImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/tit_grpImage"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/icon_url"
-        android:layout_width="282dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/inputtext"
-        android:hint="@string/icon_url"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/group_name" />
+        android:id="@+id/group_image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext"/>
+
+    <TextView
+        android:id="@+id/title_grpDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/tit_grpDetails"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/group_details"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext"/>
 
     <Button
         android:id="@+id/create_group"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/bttn_style_create_group"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppins"
         android:text="@string/create_group"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_url" />
+        android:textColor="@color/white"
+        android:textSize="21sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
