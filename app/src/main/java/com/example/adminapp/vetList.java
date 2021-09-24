@@ -31,6 +31,7 @@ public class vetList extends AppCompatActivity implements VeterinarianAdapter.Ve
     private DatabaseReference databaseReference;
     private ArrayList<VeterinarianModel> veterinarianModelArrayList;
     private RelativeLayout bottomSheetRL;
+    Button menuBtn;
     private VeterinarianAdapter veterinarianAdapter;
 
     @Override
@@ -39,6 +40,7 @@ public class vetList extends AppCompatActivity implements VeterinarianAdapter.Ve
         setContentView(R.layout.activity_vet_list);
         vetRV = findViewById(R.id.idVet);
         vetList_TV = findViewById(R.id.TV_vetList);
+        menuBtn = findViewById(R.id.BtnMenu);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Veterinarians");
         veterinarianModelArrayList = new ArrayList<>();
@@ -48,6 +50,15 @@ public class vetList extends AppCompatActivity implements VeterinarianAdapter.Ve
         bottomSheetRL = findViewById(R.id.idRLBSheet);
 
         getAllVeterinarians();
+
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(vetList.this,Menu.class);
+                startActivity(i);
+            }
+        });
 
     }
 

@@ -20,18 +20,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EditVeterinarian extends AppCompatActivity {
-    private EditText vetName, vetAddress, vetContact, vetEmail;
+    private EditText veteName, vetAddress, vetContact, vetEmail;
     private Button EdtVetBtn, DeleteVetBtn;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private VeterinarianModel veterinarianModel;
+    private String VetName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_veterinarian);
         firebaseDatabase = FirebaseDatabase.getInstance();
-        vetName = findViewById(R.id.Name_EV);
+        veteName = findViewById(R.id.Name_EV);
         vetAddress = findViewById(R.id.address_EV);
         vetContact = findViewById(R.id.contact_EV);
         vetEmail = findViewById(R.id.Email_EV);
@@ -40,17 +41,18 @@ public class EditVeterinarian extends AppCompatActivity {
         veterinarianModel = getIntent().getParcelableExtra("veterinarian");
 
         if(veterinarianModel!=null){
-            vetName.setText(veterinarianModel.getVetName());
+            veteName.setText(veterinarianModel.getVetName());
             vetAddress.setText(veterinarianModel.getVetAddress());
             vetContact.setText(veterinarianModel.getVetContact());
             vetEmail.setText(veterinarianModel.getVetEmail());
+            VetName = veterinarianModel.getVetName();
         }
 
-        databaseReference = firebaseDatabase.getReference("Veterinarians").child(String.valueOf(vetName));
+        databaseReference = firebaseDatabase.getReference("Veterinarians").child(VetName);
         EdtVetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String VetName = vetName.getText().toString();
+                String VetName = veteName.getText().toString();
                 String Address = vetAddress.getText().toString();
                 String Contact = vetContact.getText().toString();
                 String Email = vetEmail.getText().toString();
@@ -65,7 +67,7 @@ public class EditVeterinarian extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                        databaseReference.updateChildren(map);
-                        Toast.makeText(EditVeterinarian.this, "Veterinarian Details Updated", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditVeterinarian.this, "Details Updated Succesfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(EditVeterinarian.this, vetList.class));
                     }
 
@@ -85,7 +87,7 @@ public class EditVeterinarian extends AppCompatActivity {
 
             }
         });
-
+//
     }
 
     private void deleteVeterinarian(){

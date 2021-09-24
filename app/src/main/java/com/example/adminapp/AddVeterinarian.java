@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class AddVeterinarian extends AppCompatActivity {
 
     private EditText vetName, vetAddress, vetContact, vetEmail;
-    private Button addVetBtn;
+    private Button addVetBtn,menuBtn;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
@@ -33,8 +33,18 @@ public class AddVeterinarian extends AppCompatActivity {
         vetContact = findViewById(R.id.editTextPhone);
         vetEmail = findViewById(R.id.Email_AV);
         addVetBtn = findViewById(R.id.button_AV);
+        menuBtn = findViewById(R.id.BtnMenu);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Veterinarians");
+
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(AddVeterinarian.this,Menu.class);
+                startActivity(i);
+            }
+        });
 
         addVetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +53,7 @@ public class AddVeterinarian extends AppCompatActivity {
                 String Address = vetAddress.getText().toString();
                 String Contact = vetContact.getText().toString();
                 String Email = vetEmail.getText().toString();
+
                 VeterinarianModel veterinarianModel = new VeterinarianModel(VetName, Address, Contact, Email);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
