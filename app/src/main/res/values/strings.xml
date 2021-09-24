@@ -48,6 +48,7 @@
     <string name="btn_grpDelete">Delete</string>
     <string name="btn_grpEdit">Edit</string>
     <string name="btn_update">Update</string>
+    <string name="menu_Add">MENU</string>
 
 
 </resources>
