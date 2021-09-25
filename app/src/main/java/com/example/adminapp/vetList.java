@@ -48,7 +48,6 @@ public class vetList extends AppCompatActivity implements VeterinarianAdapter.Ve
         vetRV.setLayoutManager(new LinearLayoutManager(this));
         vetRV.setAdapter(veterinarianAdapter);
         bottomSheetRL = findViewById(R.id.idRLBSheet);
-
         getAllVeterinarians();
 
         menuBtn.setOnClickListener(new View.OnClickListener() {
