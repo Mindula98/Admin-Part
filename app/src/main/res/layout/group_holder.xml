@@ -31,9 +31,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/labrador_retriever"
-                    app:civ_border_color="@color/dark_orange"
-                    app:civ_border_width="2dp" />
+                    android:src="@drawable/labrador_retriever"/>
 
                 <TextView
                     android:id="@+id/groupName"
