@@ -1,5 +1,6 @@
 package com.example.adminapp;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class GrouAdapter extends FirebaseRecyclerAdapter<GroupsModel,GrouAdapter
 
 
     @Override
-    protected void onBindViewHolder(@NonNull groupHolder holder, final int position, @NonNull GroupsModel model) {
+    protected void onBindViewHolder(@NonNull groupHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull GroupsModel model) {
         holder.groupName.setText(model.getName());
         holder.details.setText(model.getDetails());
 
