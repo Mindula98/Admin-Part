@@ -31,7 +31,6 @@ public class DogsGroups extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<GroupsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Groups"), GroupsModel.class)
                         .build();
-
         grouAdapter = new GrouAdapter(options);
         recyclerView.setAdapter(grouAdapter);
 
@@ -43,13 +42,11 @@ public class DogsGroups extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         grouAdapter.startListening();
     }
-
     @Override
     protected void onStop() {
         super.onStop();

@@ -5,16 +5,18 @@ public class GroupsModel {
     String Name;
     String Image;
     String Details;
+    String GroupId;
 
     GroupsModel()
     {
 
     }
 
-    public GroupsModel(String name, String image, String details) {
+    public GroupsModel(String name, String image, String details, String groupId) {
         Name = name;
         Image = image;
         Details = details;
+        GroupId = groupId;
     }
 
     public String getName() {
@@ -39,5 +41,13 @@ public class GroupsModel {
 
     public void setDetails(String details) {
         Details = details;
+    }
+
+    public String getGroupId() {
+        return GroupId;
+    }
+
+    public void setGroupId(String groupId) {
+        GroupId = groupId;
     }
 }
