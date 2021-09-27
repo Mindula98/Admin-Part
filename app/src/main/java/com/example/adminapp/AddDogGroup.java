@@ -16,9 +16,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class AddDogGroup extends AppCompatActivity {
 
+    String GroupId;
     EditText groupName, groupImage, groupDetails;
     Button btnAddgroup;
 
@@ -30,6 +32,7 @@ public class AddDogGroup extends AppCompatActivity {
         groupName = (EditText)findViewById(R.id.group_name);
         groupImage = (EditText)findViewById(R.id.group_image);
         groupDetails = (EditText)findViewById(R.id.group_details);
+        GroupId = UUID.randomUUID().toString();
 
         btnAddgroup = (Button)findViewById(R.id.create_group);
 
@@ -48,8 +51,9 @@ public class AddDogGroup extends AppCompatActivity {
         map.put("Name",groupName.getText().toString());
         map.put("Image",groupImage.getText().toString());
         map.put("Details",groupDetails.getText().toString());
+        map.put("GroupId",GroupId);
 
-        FirebaseDatabase.getInstance().getReference().child("Groups").child(groupName.getText().toString())
+        FirebaseDatabase.getInstance().getReference().child("Groups").child(GroupId)
                .setValue(map)
                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -70,6 +74,7 @@ public class AddDogGroup extends AppCompatActivity {
         groupName.setText("");
         groupImage.setText("");
         groupDetails.setText("");
+        GroupId = UUID.randomUUID().toString();
 
     }
 }

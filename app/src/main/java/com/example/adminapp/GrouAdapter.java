@@ -118,7 +118,7 @@ public class GrouAdapter extends FirebaseRecyclerAdapter<GroupsModel,GrouAdapter
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("Groups")
-                                .child(getRef(position).getKey()).removeValue();
+                                .child(model.getGroupId()).removeValue();
                     }
                 });
 
