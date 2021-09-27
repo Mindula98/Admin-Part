@@ -26,6 +26,7 @@ public class EditVeterinarian extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private VeterinarianModel veterinarianModel;
     private String VetName;
+    private String vetID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +47,10 @@ public class EditVeterinarian extends AppCompatActivity {
             vetContact.setText(veterinarianModel.getVetContact());
             vetEmail.setText(veterinarianModel.getVetEmail());
             VetName = veterinarianModel.getVetName();
+            vetID = veterinarianModel.getVetID();
         }
 
-        databaseReference = firebaseDatabase.getReference("Veterinarians").child(VetName);
+        databaseReference = firebaseDatabase.getReference("Veterinarians").child(vetID);
         EdtVetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,20 +65,24 @@ public class EditVeterinarian extends AppCompatActivity {
                 map.put("vetContact",Contact);
                 map.put("vetEmail",Email);
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                       databaseReference.updateChildren(map);
+                databaseReference.updateChildren(map);
                         Toast.makeText(EditVeterinarian.this, "Details Updated Succesfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(EditVeterinarian.this, vetList.class));
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(EditVeterinarian.this, "Failed to Update", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
+//                databaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                       databaseReference.updateChildren(map);
+//                        Toast.makeText(EditVeterinarian.this, "Details Updated Succesfully", Toast.LENGTH_SHORT).show();
+//                        startActivity(new Intent(EditVeterinarian.this, vetList.class));
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//                        Toast.makeText(EditVeterinarian.this, "Failed to Update", Toast.LENGTH_SHORT).show();
+//
+//                    }
+//                });
             }
         });
 

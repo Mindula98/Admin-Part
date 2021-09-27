@@ -16,8 +16,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.UUID;
+
 public class AddVeterinarian extends AppCompatActivity {
 
+    private String vetID;
     private EditText vetName, vetAddress, vetContact, vetEmail;
     private Button addVetBtn,menuBtn;
     private FirebaseDatabase firebaseDatabase;
@@ -53,24 +56,29 @@ public class AddVeterinarian extends AppCompatActivity {
                 String Address = vetAddress.getText().toString();
                 String Contact = vetContact.getText().toString();
                 String Email = vetEmail.getText().toString();
+                vetID = UUID.randomUUID().toString();
 
-                VeterinarianModel veterinarianModel = new VeterinarianModel(VetName, Address, Contact, Email);
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        databaseReference.child(VetName).setValue(veterinarianModel);
+                VeterinarianModel veterinarianModel = new VeterinarianModel(VetName, Address, Contact, Email, vetID);
+                databaseReference.child(vetID).setValue(veterinarianModel);
                         Toast.makeText(AddVeterinarian.this, "Veterinarian Added", Toast.LENGTH_SHORT).show();
                         Clear();
 
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(AddVeterinarian.this, "Error is " + error.toString(), Toast.LENGTH_SHORT).show();
-
-                    }
-                });
+//                databaseReference.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        databaseReference.child(VetName).setValue(veterinarianModel);
+//                        Toast.makeText(AddVeterinarian.this, "Veterinarian Added", Toast.LENGTH_SHORT).show();
+//                        Clear();
+//
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//                        Toast.makeText(AddVeterinarian.this, "Error is " + error.toString(), Toast.LENGTH_SHORT).show();
+//
+//                    }
+//                });
 
             }
         });

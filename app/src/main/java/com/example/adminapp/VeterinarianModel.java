@@ -8,17 +8,7 @@ public class VeterinarianModel implements Parcelable {
     private String vetAddress;
     private String vetContact;
     private String vetEmail;
-
-    public VeterinarianModel(){
-
-    }
-
-    protected VeterinarianModel(Parcel in) {
-        vetName = in.readString();
-        vetAddress = in.readString();
-        vetContact = in.readString();
-        vetEmail = in.readString();
-    }
+    private String vetID;
 
     public static final Creator<VeterinarianModel> CREATOR = new Creator<VeterinarianModel>() {
         @Override
@@ -64,12 +54,37 @@ public class VeterinarianModel implements Parcelable {
         this.vetEmail = vetEmail;
     }
 
-    public VeterinarianModel(String vetName, String vetAddress, String vetContact, String vetEmail) {
+    public String getVetID() {
+        return vetID;
+    }
+
+    public void setVetID(String vetID) {
+        this.vetID = vetID;
+    }
+
+    public VeterinarianModel(String vetName, String vetAddress, String vetContact, String vetEmail, String vetID) {
         this.vetName = vetName;
         this.vetAddress = vetAddress;
         this.vetContact = vetContact;
         this.vetEmail = vetEmail;
+        this.vetID = vetID;
     }
+
+    public VeterinarianModel(){
+
+    }
+
+    protected VeterinarianModel(Parcel in) {
+        vetName = in.readString();
+        vetAddress = in.readString();
+        vetContact = in.readString();
+        vetEmail = in.readString();
+        vetID = in.readString();
+    }
+
+
+
+
 
     @Override
     public int describeContents() {
@@ -82,5 +97,6 @@ public class VeterinarianModel implements Parcelable {
         parcel.writeString(vetAddress);
         parcel.writeString(vetContact);
         parcel.writeString(vetEmail);
+        parcel.writeString(vetID);
     }
 }
