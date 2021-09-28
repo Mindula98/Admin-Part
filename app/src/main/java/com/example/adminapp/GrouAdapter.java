@@ -70,6 +70,7 @@ public class GrouAdapter extends FirebaseRecyclerAdapter<GroupsModel,GrouAdapter
                 EditText dtls = view.findViewById(R.id.upd_grpDetails);
 
                 Button btnUpdate = view.findViewById(R.id.btn_update);
+                String grpID = model.GroupId;
 
                 name.setText(model.getName());
                 img.setText(model.getImage());
@@ -86,7 +87,7 @@ public class GrouAdapter extends FirebaseRecyclerAdapter<GroupsModel,GrouAdapter
                         map.put("Details",dtls.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Groups")
-                                .child(getRef(position).getKey()).updateChildren(map)
+                                .child(grpID).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
